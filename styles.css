@@ -312,6 +312,11 @@ h1 {
 /* -------------------------------------------------------------
    SECCIONES ESPECÍFICAS
 -------------------------------------------------------------- */
+/* Sección sobre mi */
+#inicio h1{
+  margin-bottom: -20px;
+  margin-top: 20px;
+}
 /* Sección Skills (habilidades) */
 #skills {
   padding: 60px 0;
@@ -399,5 +404,36 @@ main {
   /* Reducir el ancho del sidebar */
   #sidebar {
     width: 200px;
+  }
+}
+/* -------------------------------------------------------------
+   MEDIA QUERIES PARA DISPOSITIVOS PEQUEÑOS (max-width: 500px)
+-------------------------------------------------------------- */
+@media (max-width: 500px) {
+  /* Elimina el height fijo para que cada sección se adapte al contenido */
+  section {
+    height: auto !important;
+    padding: 20px !important;
+  }
+  
+  /* Evita que los títulos se posicionen de forma absoluta y se superpongan */
+  section h1 {
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+  
+  /* Ajusta el margen inferior de la barra decorativa para no sobreponer contenido */
+  .base {
+    margin-bottom: 10px !important;
+  }
+  
+  /* Ajusta márgenes en la sección de proyectos para que no haya espacios excesivos */
+  #proyectos h5 {
+    margin-top: 10px !important;
+  }
+  
+  #proyectos p {
+    margin-top: 20px !important;
   }
 }
