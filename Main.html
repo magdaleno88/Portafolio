@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Personal</title>
+  <!-- Fuente moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Archivo CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Botón para togglear el sidebar en móviles -->
+  <button class="btn btn-primary d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <!-- Sidebar utilizando Offcanvas de Bootstrap -->
+  <div class="offcanvas offcanvas-start offcanvas-lg" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+    
+    <div class="offcanvas-header">
+      <!-- Botón de cierre (visible solo en móviles) -->
+      <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <div class="base"></div>
+      <nav class="mt-4">
+        <ul class="nav flex-column">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificados">Certificados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar-bottom mt-auto">
+        <div class="social-icons">
+          <a href="https://linkedin.com" target="_blank"><i class="bi bi-linkedin"></i></a>
+          <a href="https://github.com" target="_blank"><i class="bi bi-github"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenido Principal -->
+  <main>
+    <canvas id="particleCanvas"></canvas>
+    <section id="inicio" style="height:100vh; padding:40px; background:#0000005e;">
+      <div class="row align-items-center">
+        <div class="col-lg-2 text-center mb-4 mb-lg-0">
+          <img src="img/Yo.png" 
+               alt="Foto de perfil profesional" 
+               class="profile-image img-fluid">
+        </div>
+        <div class="col-lg-8">
+          <h1 class="display-5 fw-bold mb-4">Sobre Mí</h1>
+          <p class="lead mb-4 about-text">
+            Soy Jesús Magdaleno, ingeniero biomédico en proceso de formación como ingeniero en sistemas y estudiante de una maestría en Tecnologías de la Información y Comunicación. Me apasiona la resolución de problemas mediante la tecnología y el desarrollo de software.
+            Si bien no cuento con experiencia laboral formal, he trabajado en diversos proyectos de programación que han fortalecido mis habilidades en lógica, matemáticas y pensamiento computacional.
+          </p>
+          <div class="mb-4">
+            <h3 class="h4 mb-3">Mis Habilidades</h3>
+            <div id="skills-container">
+              <!-- Skills se insertarán dinámicamente -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="certificados" style="height:100vh; padding:40px; background:#0000005e;">
+      <h1>Certificados</h1>
+      <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Botón para ver todos -->
+        <div class="carousel-btn">
+          <a onclick="openpag()" class="btn btn-primary">Ver todos</a>
+        </div>
+        <!-- Carrusel -->
+        <div class="carousel-inner">
+          <!-- Primer grupo de cartas -->
+          <div class="carousel-item active">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                  <img src="img/1.PNG" class="card-img-top" alt="Imagen 1">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">SQL (Intermedio)</h5>
+                    <p class="card-text">Certificado en el uso intermedio de SQL emitido por HackerRank</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                  <img src="img/2.PNG" class="card-img-top" alt="Imagen 2">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Software engineer intern</h5>
+                    <p class="card-text">Certificado de Ingeniero de software interno emitido por HackerRank (Manejo de Python y SQL)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 d-none d-md-block">
+                <div class="card">
+                  <img src="img/3.PNG" class="card-img-top" alt="Imagen 3">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Master en Python</h5>
+                    <p class="card-text">Certificado por haber concluido el curso de master en python emitido por Udemy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Segundo grupo de cartas -->
+          <div class="carousel-item">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                  <img src="img/4.PNG" class="card-img-top" alt="Imagen 4">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">SQL (Basic)</h5>
+                    <p class="card-text">Certificado en el manejo basico de SQL emitido por HackerRank</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                  <img src="img/5.PNG" class="card-img-top" alt="Imagen 5">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Problem Solving</h5>
+                    <p class="card-text">Certificado en la resolución de problemas usando Python emitido por HackerRank</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 d-none d-md-block">
+                <div class="card">
+                  <img src="img/6.PNG" class="card-img-top" alt="Imagen 6">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Python (Basic)</h5>
+                    <p class="card-text">Certificado en el manejo basico de Python emitido por HackerRank</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tercer grupo de cartas -->
+          <div class="carousel-item">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                  <img src="img/7.PNG" class="card-img-top" alt="Imagen 7">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Herramientas digitales e inteligencia artificial</h5>
+                    <p class="card-text">Certificado emitido por el tecnologico de Tijuana</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card">
+                  <img src="img/8.PNG" class="card-img-top" alt="Imagen 8">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Responsive web design</h5>
+                    <p class="card-text">Certificado de finalización de curso emitido por FreeCodeCamp</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 mb-4 d-none d-md-block">
+                <div class="card">
+                  <img src="img/9.PNG" class="card-img-top" alt="Imagen 9">
+                  <div class="base"></div>
+                  <div class="card-body">
+                    <h5 class="card-title">Bootcamp de desarrollo web</h5>
+                    <p class="card-text">Certificado de finalización de curso emitido por Udemy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Controles del carrusel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
+    <section id="proyectos" style="height:100vh; padding:90px 40px 0 40px; background:#0000005e;">
+      <h1>Proyectos</h1>
+      <div class="container text-center">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-4 col-sm-6 mb-4">
+            <a href="proyects/shop/main.html">
+              
+              <div class="card">
+                <div class="base"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-bag" viewBox="0 0 16 16">
+                  <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">Arcadium</h5>
+                  <p class="card-text">HTML, CSS y JavaScript</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <a href="proyects/menu/Main.html">
+              <div class="card">
+                <div class="base"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cup-hot" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M.5 6a.5.5 0 0 0-.488.608l1.652 7.434A2.5 2.5 0 0 0 4.104 16h5.792a2.5 2.5 0 0 0 2.44-1.958l.131-.59a3 3 0 0 0 1.3-5.854l.221-.99A.5.5 0 0 0 13.5 6zM13 12.5a2 2 0 0 1-.316-.025l.867-3.898A2.001 2.001 0 0 1 13 12.5M2.64 13.825 1.123 7h11.754l-1.517 6.825A1.5 1.5 0 0 1 9.896 15H4.104a1.5 1.5 0 0 1-1.464-1.175"/>
+                  <path d="m4.4.8-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 3.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 3.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 3 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 4.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.253.382l-.018.025-.005.008-.002.002A.5.5 0 0 1 6.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 6.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 6 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 7.4.8m3 0-.003.004-.014.019a4 4 0 0 0-.204.31 2 2 0 0 0-.141.267c-.026.06-.034.092-.037.103v.004a.6.6 0 0 0 .091.248c.075.133.178.272.308.445l.01.012c.118.158.26.347.37.543.112.2.22.455.22.745 0 .188-.065.368-.119.494a3 3 0 0 1-.202.388 5 5 0 0 1-.252.382l-.019.025-.005.008-.002.002A.5.5 0 0 1 9.6 4.2l.003-.004.014-.019a4 4 0 0 0 .204-.31 2 2 0 0 0 .141-.267c.026-.06.034-.092.037-.103a.6.6 0 0 0-.09-.252A4 4 0 0 0 9.6 2.8l-.01-.012a5 5 0 0 1-.37-.543A1.53 1.53 0 0 1 9 1.5c0-.188.065-.368.119-.494.059-.138.134-.274.202-.388a6 6 0 0 1 .253-.382l.025-.035A.5.5 0 0 1 10.4.8"/>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">El banquete de Thor</h5>
+                  <p class="card-text">HTML, CSS y JavaScript</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4 d-none d-md-block">
+            <a href="https://github.com/magdaleno88/Auto-invoice">
+              <div class="card">
+                <div class="base"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-receipt" viewBox="0 0 16 16">
+                  <path d="M1.92.506a.5.5 0 0 1 .434.14L3 1.293l.646-.647a.5.5 0 0 1 .708 0L5 1.293l.646-.647a.5.5 0 0 1 .708 0L7 1.293l.646-.647a.5.5 0 0 1 .708 0L9 1.293l.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .801.13l.5 1A.5.5 0 0 1 15 2v12a.5.5 0 0 1-.053.224l-.5 1a.5.5 0 0 1-.8.13L13 14.707l-.646.647a.5.5 0 0 1-.708 0L11 14.707l-.646.647a.5.5 0 0 1-.708 0L9 14.707l-.646.647a.5.5 0 0 1-.708 0L7 14.707l-.646.647a.5.5 0 0 1-.708 0L5 14.707l-.646.647a.5.5 0 0 1-.708 0L3 14.707l-.646.647a.5.5 0 0 1-.801-.13l-.5-1A.5.5 0 0 1 1 14V2a.5.5 0 0 1 .053-.224l.5-1a.5.5 0 0 1 .367-.27m.217 1.338L2 2.118v11.764l.137.274.51-.51a.5.5 0 0 1 .707 0l.646.647.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.646.646.646-.646a.5.5 0 0 1 .708 0l.509.509.137-.274V2.118l-.137-.274-.51.51a.5.5 0 0 1-.707 0L12 1.707l-.646.647a.5.5 0 0 1-.708 0L10 1.707l-.646.647a.5.5 0 0 1-.708 0L8 1.707l-.646.647a.5.5 0 0 1-.708 0L6 1.707l-.646.647a.5.5 0 0 1-.708 0L4 1.707l-.646.647a.5.5 0 0 1-.708 0z"/>
+                  <path d="M3 4.5a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h6a.5.5 0 1 1 0 1h-6a.5.5 0 0 1-.5-.5m8-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5"/>
+                </svg>
+                <div class="card-body">
+                  <h5 class="card-title">Cargador de facturas</h5>
+                  <p class="card-text">Python, Selenium, PYQT5</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" style="height:100vh; padding:40px; background:#0000005e;">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col text-center">
+            <h2>Lenguajes, Herramientas y Habilidades</h2>
+            <p class="lead">Conoce las tecnologías que domino y las competencias que me definen.</p>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Lenguajes y Herramientas -->
+          <div class="col-lg-6 mb-4">
+            <h3>Lenguajes y Herramientas</h3>
+            <ul>
+              <li>Python</li>
+              <li>Django</li>
+              <li>Flask</li>
+              <li>Selenium</li>
+              <li>PYQT5</li>
+              <li>MySQL</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>Bootstrap</li>
+              <li>Arduino</li>
+              <li>Matlab</li>
+              <li>Labview</li>
+              <li>Appinventor</li>
+            </ul>
+          </div>
+          <!-- Habilidades -->
+          <div class="col-lg-6 mb-4">
+            <div class="row">
+              <!-- Habilidades Duras -->
+              <div class="col-md-6">
+                <h4>Habilidades Duras</h4>
+                <ul>
+                  <li>Desarrollo Web y Backend</li>
+                  <li>Programación Orientada a Objetos</li>
+                  <li>Manejo de Bases de Datos</li>
+                  <li>Desarrollo de Aplicaciones IoT</li>
+                  <li>Análisis de Datos y Automatización</li>
+                </ul>
+              </div>
+              <!-- Habilidades Blandas -->
+              <div class="col-md-6">
+                <h4>Habilidades Blandas</h4>
+                <ul>
+                  <li>Trabajo en Equipo</li>
+                  <li>Comunicación Efectiva</li>
+                  <li>Resolución de Problemas</li>
+                  <li>Adaptabilidad</li>
+                  <li>Gestión del Tiempo</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Archivo JavaScript -->
+  <script src="script.js"></script>
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
