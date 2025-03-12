@@ -1,3 +1,7 @@
 [submodule "proyects/menu"]
     path = proyects/menu
     url = <https://github.com/magdaleno88/Portafolio/blob/main/proyects/menu>
+
+[submodule "proyects/shop"]
+    path = proyects/shop
+    url = https://github.com/magdaleno88/Portafolio/blob/main/proyects/shop
