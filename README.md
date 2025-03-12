@@ -22,6 +22,12 @@ Interactividad: Navega por las secciones de forma fluida gracias a la estructura
 Diseño Responsivo: La interfaz está adaptada para verse bien en diferentes tamaños de pantalla, desde móviles hasta pantallas de escritorio.
 Efectos Especiales: El diseño espacial utiliza animaciones CSS y JavaScript para generar efectos como el fondo de estrellas, barras de luz y transiciones en los elementos al hacer scroll.
 
+Capturas
+<img width="946" alt="Portafolio1" src="https://github.com/user-attachments/assets/ef1cd73e-6a24-40bd-805d-0a3b878727d6" />
+<img width="941" alt="Portafolio2" src="https://github.com/user-attachments/assets/1b8ec372-0b84-459a-a8b2-4d5da2d4ee6c" />
+<img width="945" alt="Portafolio3" src="https://github.com/user-attachments/assets/46cbbb09-e735-4c4f-958f-68eb897b1253" />
+<img width="945" alt="Portafolio4" src="https://github.com/user-attachments/assets/0b2fa04c-bad6-4757-aa9c-33c3a8f50508" />
+
 
 🚀 Cómo ejecutar el proyecto
 Para visualizar el portafolio en tu navegador, solo necesitas descargar o clonar el repositorio y abrir el archivo Main.html en cualquier navegador moderno.
