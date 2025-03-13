@@ -1,0 +1,201 @@
+:root {
+    --primary-color: #3A4E6D;
+    --secondary-color: #796A7F;
+    --text-color: #ffba0d;
+    --bg-color: #18202b;
+    --card-bg: #010512;
+    --wood: url('https://www.transparenttextures.com/patterns/purty-wood.png');
+    --paper: url('https://www.transparenttextures.com/patterns/exclusive-paper.png');
+    --metal: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+
+[data-theme="dark"] {
+    --text-color: #1F2937;
+    --bg-color: #fff;
+    --card-bg: #999292;
+    --wood: url('https://www.transparenttextures.com/patterns/purty-wood.png');
+    --paper: url('//www.transparenttextures.com/patterns/clean-gray-paper.png');
+    --metal: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Papyrus', fantasy;
+    transition: all 0.3s ease;
+}
+
+body {
+    background: var(--wood);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: inherit; 
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: var(--wood);
+    background-color: var(--bg-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+}
+
+.nav a {
+    margin-left: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#theme-toggle {
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.hero {
+    height: 60vh;
+    font-size: large;
+    font-weight: bold;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero.jpg') center/cover;
+    background-color: #8B5A2B;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 20px ridge #bd8803;
+    margin: 80px 20px 20px ;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.1),
+                inset -2px -2px 6px rgba(0, 0, 0, 0.7),
+                4px 4px 10px rgba(0, 0, 0, 0.6);
+    filter: sepia(20%) contrast(120%);
+}
+
+
+
+.menu-section {
+    padding: 4rem 5%;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.filter-btn {
+    background: linear-gradient(145deg, var(--bg-color), var(--card-bg));
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 24px;
+    border: 3px solid #453f00; 
+    border-radius: 6px;
+    text-transform: uppercase;
+    box-shadow: inset 2px 2px 6px rgba(255, 255, 255, 0.1),
+                inset -2px -2px 6px rgba(0, 0, 0, 0.7),
+                4px 4px 10px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.1s ease-in-out, box-shadow 0.3s;
+}
+
+.filter-btn::before {
+    content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: var(--metal);
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+}
+
+.filter-btn:hover {
+    transform: scale(1.05);
+    box-shadow: inset 3px 3px 8px rgba(255, 255, 255, 0.2),
+                inset -3px -3px 8px rgba(0, 0, 0, 0.8),
+                6px 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.filter-btn.active {
+    transform: scale(0.95);
+    border: 3px solid #ffba0d;
+    
+    
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.menu-item {
+    background: var(--paper);
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #ffba0d;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.14), 0 6px 2px -2px rgba(0, 0, 0, 0.2), 0 8px 10px 0 rgba(0, 0, 0, 0.12);
+
+}
+
+.menu-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+
+}
+
+.item-info {
+    font-size: large;
+    padding: 1rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    font-size: large;
+    padding: 0.8rem;
+    border: none;
+    background-color: #131d2b00;
+    color: var(--text-color);
+    cursor: pointer;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.footer {
+    background-color: var(--card-bg);
+    padding: 2rem 5%;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .nav a {
+        display: none;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
