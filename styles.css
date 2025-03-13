@@ -55,7 +55,7 @@ section {
 /* Título sticky dentro de cada sección */
 h1 {
   position: absolute;
-  top: 10px;
+  top: 5px;
   z-index: 10;
 }
 
