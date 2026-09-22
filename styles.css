@@ -133,6 +133,13 @@ em { font-weight: 500; }
 .credential-line strong { font-family: "Cormorant Garamond", Georgia, serif; font-size: 1.8rem; font-weight: 600; line-height: 1.1; }
 .credential-line span:last-child { color: var(--muted); font-size: .8rem; }
 
+.interlude { display: grid; grid-template-columns: .82fr 1.18fr; align-items: center; gap: clamp(2rem,5vw,6rem); padding: clamp(3.5rem,5vw,5.5rem) clamp(2.5rem,5.5vw,7rem); border-top: 1px solid var(--gold); background: linear-gradient(rgba(248,245,238,.9),rgba(248,245,238,.9)),url("img/marble-veins.svg") center / 1500px auto; }
+.interlude-heading h2 { max-width: 490px; margin: .8rem 0 0; font-size: clamp(3.3rem,4.7vw,5.1rem); }
+.interlude-heading h2 em { color: var(--gold-deep); }
+.interlude-copy { padding-left: clamp(1.2rem,2.5vw,2.8rem); border-left: 1px solid var(--gold); }
+.interlude-copy p { max-width: 630px; margin: 0; color: #47433b; font-size: .96rem; line-height: 1.8; }
+.interlude-copy p + p { margin-top: 1rem; color: var(--gold-deep); font-weight: 600; }
+
 .colophon { position: relative; padding: clamp(5rem,9vw,10rem) clamp(2.5rem,5.5vw,7rem); color: var(--white); background: linear-gradient(90deg,rgba(10,9,8,.95),rgba(15,12,10,.78)),url("img/gothic-hall.png") center 35% / cover; border-top: 3px double var(--gold); }
 .colophon::after { content: "JM"; position: absolute; right: 4vw; bottom: -.5rem; color: rgba(180,147,80,.12); font: 15rem "Cormorant Garamond", Georgia, serif; line-height: 1; pointer-events: none; }
 .colophon > * { position: relative; z-index: 1; }
@@ -165,7 +172,7 @@ em { font-weight: 500; }
   .rail-note { display: none; }
   .book-page { margin-left: 0; }
   .opening-grid { grid-template-columns: .7fr 1.3fr; }
-  .education, .craft { grid-template-columns: 1fr; gap: 2.5rem; }
+  .education, .craft, .interlude { grid-template-columns: 1fr; gap: 2.5rem; }
   .chapter-intro, .craft-intro { position: static; }
   .project-banner { width: 100%; }
   .banner-cloth { gap: 1.2rem; padding-right: 5rem; }
@@ -181,6 +188,8 @@ em { font-weight: 500; }
   .opening h1 { font-size: clamp(3.85rem,13.3vw,6rem); }
   .opening-bottomline { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; font-size: .55rem; }
   .education, .work, .craft, .credentials, .colophon { padding: 4.6rem 1.25rem; }
+  .interlude { gap: 1.5rem; padding: 3.5rem 1.25rem; }
+  .interlude-heading h2 { font-size: 3.7rem; }
   .chapter-intro h2, .craft-intro h2 { font-size: 4.1rem; }
   .education-entry { grid-template-columns: 2.5rem 1fr; gap: 1rem; }
   .work-heading { margin-bottom: 3.5rem; }
