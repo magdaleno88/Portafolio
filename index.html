@@ -3,95 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portafolio de Jesús Magdaleno: Python, automatización, visión por computadora y software aplicado.">
-  <meta name="theme-color" content="#f5f2eb">
-  <title>Jesús Magdaleno | Python, automatización y visión por computadora</title>
+  <meta name="description" content="Portafolio de Jesús Magdaleno. Ingeniería biomédica, formación en Sistemas y maestría en TIC; proyectos de Python, automatización y visión por computadora.">
+  <meta name="theme-color" content="#1b1a17">
+  <title>Jesús Magdaleno | Software, automatización y visión por computadora</title>
   <link rel="icon" href="img/favicon-marble.svg" type="image/svg+xml">
-  <script>document.documentElement.classList.add('js')</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=marble-portfolio-2">
+  <link rel="stylesheet" href="styles.css?v=folio-flags-2">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
-  <header class="site-header">
-    <a class="brand" href="#inicio" aria-label="Ir al inicio"><span class="brand-mark" aria-hidden="true">JM</span><span>Jesús Magdaleno</span></a>
+
+  <header class="site-rail">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio"><span class="brand-seal" aria-hidden="true">JM</span><span class="brand-name">Jesús<br>Magdaleno</span></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span class="sr-only">Abrir menú</span><span></span><span></span><span></span></button>
     <nav id="main-nav" class="main-nav" aria-label="Navegación principal">
-      <a href="#proyectos">Proyectos</a><a href="#experiencia">Perfil</a><a href="#habilidades">Tecnologías</a><a class="nav-cta" href="#contacto">Contacto</a>
+      <a href="#inicio"><span>01</span> Apertura</a>
+      <a href="#trayectoria"><span>02</span> Trayectoria</a>
+      <a href="#proyectos"><span>03</span> Proyectos</a>
+      <a href="#habilidades"><span>04</span> Oficio</a>
+      <a href="#contacto"><span>05</span> Contacto</a>
     </nav>
+    <p class="rail-note">PORTAFOLIO<br>SELECCIÓN DE OBRA · 2026</p>
   </header>
 
-  <main id="contenido">
-    <section id="inicio" class="hero section-shell">
-      <div class="hero-copy reveal visible">
-        <p class="eyebrow">Software aplicado a problemas reales</p>
-        <h1>Python, automatización <span>y visión por computadora</span></h1>
-        <p class="hero-summary">Soy Jesús Magdaleno. Desarrollo herramientas que convierten procesos manuales, imágenes y datos estructurados en soluciones reproducibles y fáciles de usar.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#proyectos">Ver proyectos</a>
-          <a class="button button-secondary" href="https://github.com/magdaleno88" target="_blank" rel="noreferrer">GitHub ↗</a>
+  <main id="contenido" class="book-page">
+    <section id="inicio" class="opening" aria-labelledby="opening-title">
+      <div class="opening-topline"><span>JESÚS MAGDALENO</span><span>DESARROLLO DE SOFTWARE · IA APLICADA</span></div>
+      <div class="opening-grid">
+        <figure class="portrait">
+          <div class="portrait-image"><img src="img/Yo.png" alt="Retrato de Jesús Magdaleno" width="600" height="600"></div>
+          <figcaption><span>FIG. 01</span> Ingeniería, salud y tecnología</figcaption>
+        </figure>
+        <div class="opening-copy">
+          <p class="folio-label">01 / APERTURA</p>
+          <h1 id="opening-title">Del problema real <em>al software que funciona.</em></h1>
+          <p class="opening-lead">Desarrollo herramientas con Python, automatización y visión por computadora para convertir imágenes, datos y procesos en soluciones útiles.</p>
+          <p class="opening-note">Soy Jesús Magdaleno. Mi recorrido une la ingeniería biomédica con la formación en Sistemas y las tecnologías de la información.</p>
+          <div class="opening-actions"><a class="text-link" href="#proyectos">Explorar proyectos <span aria-hidden="true">↗</span></a><a class="text-link subtle" href="https://github.com/magdaleno88" target="_blank" rel="noreferrer">Ver GitHub <span aria-hidden="true">↗</span></a></div>
         </div>
-        <ul class="signal-list" aria-label="Áreas principales"><li>Visión por computadora</li><li>Automatización de procesos</li><li>Aplicaciones de escritorio</li><li>APIs y datos</li></ul>
       </div>
-      <aside class="hero-panel reveal visible" aria-label="Resumen profesional">
-        <div class="portrait-wrap"><img src="img/Yo.png" alt="Retrato de Jesús Magdaleno" width="240" height="240"><span class="availability">Disponible para oportunidades</span></div>
-        <div class="profile-facts">
-          <div><span>Enfoque</span><strong>Software e IA aplicada</strong></div>
-          <div><span>Stack principal</span><strong>Python · PyTorch · SQL</strong></div>
-          <div><span>Formación</span><strong>Ingeniería biomédica y TIC</strong></div>
-        </div>
-      </aside>
+      <div class="opening-bottomline"><span>VISIÓN POR COMPUTADORA</span><span>AUTOMATIZACIÓN</span><span>APLICACIONES</span><span>DATOS</span></div>
     </section>
 
-    <section id="proyectos" class="section-shell section-block">
-      <div class="section-heading reveal"><p class="eyebrow">Trabajo seleccionado</p><h2>Proyectos que muestran cómo resuelvo problemas</h2><p>Cada proyecto documenta el problema, las decisiones técnicas y el alcance actual.</p></div>
-      <div class="project-grid">
-        <article class="project-card project-featured reveal">
-          <div class="project-number">01</div><div class="project-content"><div class="project-meta"><span>Computer vision</span><span>Proyecto principal</span></div><h3>SAM AI: retinopatía diabética y OCT</h3><p>Dos flujos de investigación para imágenes de retina: análisis de fondo de ojo con DDR2019 y clasificación de B-scans OCT, con preparación de datos, entrenamiento, evaluación y explicabilidad.</p><ul class="tech-list"><li>Python</li><li>PyTorch</li><li>Deep Learning</li><li>Medical Imaging</li></ul><a class="project-link" href="https://github.com/magdaleno88/Sam_Oct_IA" target="_blank" rel="noreferrer">Explorar repositorio <span>↗</span></a></div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-number">02</div><div class="project-content"><div class="project-meta"><span>Automatización</span></div><h3>Generador de reportes de servicio</h3><p>Aplicación de escritorio que transforma registros y fotografías de equipos en reportes Word individuales y consolidados.</p><ul class="tech-list"><li>Python</li><li>Tkinter</li><li>SQLite</li><li>python-docx</li></ul><a class="project-link" href="https://github.com/magdaleno88/generador_reportes" target="_blank" rel="noreferrer">Explorar repositorio <span>↗</span></a></div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-number">03</div><div class="project-content"><div class="project-meta"><span>Desktop automation</span></div><h3>Auto-invoice</h3><p>Interfaz de escritorio y automatización de navegador para reducir pasos repetitivos en la carga de facturas de un proceso interno.</p><ul class="tech-list"><li>Python</li><li>PyQt5</li><li>Selenium</li><li>XML</li></ul><a class="project-link" href="https://github.com/magdaleno88/Auto-invoice" target="_blank" rel="noreferrer">Explorar repositorio <span>↗</span></a></div>
-        </article>
-        <article class="project-card reveal">
-          <div class="project-number">04</div><div class="project-content"><div class="project-meta"><span>Backend</span></div><h3>SAM Annotate API</h3><p>API REST para organizar imágenes, tareas y anotaciones en flujos de clasificación, con PostgreSQL y almacenamiento de archivos.</p><ul class="tech-list"><li>Ruby on Rails</li><li>REST API</li><li>PostgreSQL</li><li>Active Storage</li></ul><a class="project-link" href="https://github.com/magdaleno88/sam-annotate-api" target="_blank" rel="noreferrer">Explorar repositorio <span>↗</span></a></div>
-        </article>
+    <section id="trayectoria" class="education" aria-labelledby="education-title">
+      <div class="chapter-intro"><p class="folio-label">02 / TRAYECTORIA</p><h2 id="education-title">La formación detrás del trabajo.</h2><p>El contexto clínico, la ingeniería de software y la investigación tecnológica se encuentran en mis proyectos.</p></div>
+      <div class="education-path" aria-label="Formación académica">
+        <div class="education-entry"><span class="entry-number">I</span><div><p class="entry-state">BASE PROFESIONAL</p><h3>Ingeniería Biomédica</h3><p>Una forma de entender problemas de salud, equipos, imágenes y datos con rigor técnico.</p></div></div>
+        <div class="education-entry"><span class="entry-number">II</span><div><p class="entry-state">EN FORMACIÓN</p><h3>Ingeniería en Sistemas</h3><p>Desarrollo de software, estructuras de datos y construcción de soluciones completas.</p></div></div>
+        <div class="education-entry"><span class="entry-number">III</span><div><p class="entry-state">EN CURSO</p><h3>Maestría en Tecnologías de la Información y Comunicación</h3><p>Una mirada de investigación y aplicación para llevar tecnología a problemas reales.</p></div></div>
       </div>
     </section>
 
-    <section id="experiencia" class="section-shell section-block profile-section">
-      <div class="section-heading reveal"><p class="eyebrow">Perfil</p><h2>Una combinación de tecnología, salud y procesos</h2></div>
-      <div class="profile-grid">
-        <div class="profile-copy reveal"><p>Mi formación en ingeniería biomédica aporta contexto para trabajar con problemas de salud, equipos y datos clínicos. La complementé con estudios en sistemas y tecnologías de la información para construir soluciones de software completas.</p><p>Me interesa colaborar en equipos donde pueda aportar en Python, automatización, visión por computadora o backend, con atención a documentación, reproducibilidad y manejo responsable de datos.</p></div>
-        <div class="principles reveal"><div><strong>01</strong><span>Entender el proceso antes de automatizarlo.</span></div><div><strong>02</strong><span>Documentar para que otra persona pueda reproducirlo.</span></div><div><strong>03</strong><span>Comunicar límites y resultados con claridad.</span></div></div>
+    <section id="proyectos" class="work" aria-labelledby="work-title">
+      <div class="work-heading"><p class="folio-label">03 / OBRA SELECCIONADA</p><h2 id="work-title">Cuatro proyectos.<br><em>Cuatro banderas.</em></h2><p>Una selección de trabajos que muestra distintas formas de observar, construir y automatizar.</p></div>
+      <div class="banner-stack">
+        <article class="project-banner banner-left banner-dark">
+          <span class="banner-pole" aria-hidden="true"></span>
+          <div class="banner-cloth">
+            <div class="banner-emblem" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="24"/><path d="M10 32c11-14 33-14 44 0-11 14-33 14-44 0Z"/><circle cx="32" cy="32" r="7"/><path d="M32 1v7m0 48v7M1 32h7m48 0h7M11 11l5 5m32 32 5 5M53 11l-5 5M16 48l-5 5"/></svg></div>
+            <div class="banner-story"><p class="banner-type">ESTANDARTE I · VISIÓN POR COMPUTADORA</p><h3>SAM AI: retinopatía diabética y OCT</h3><p>Dos flujos para imágenes de retina: fondo de ojo DDR2019 y B-scans OCT. Incluyen preparación de datos, entrenamiento, evaluación y explicabilidad.</p><p class="banner-tools">Python · PyTorch · aprendizaje profundo · imágenes médicas</p><a href="https://github.com/magdaleno88/Sam_Oct_IA" target="_blank" rel="noreferrer">Abrir proyecto <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project-banner banner-right banner-light">
+          <span class="banner-pole" aria-hidden="true"></span>
+          <div class="banner-cloth">
+            <div class="banner-emblem" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M18 9h22l8 8v37H18Z"/><path d="M40 9v9h8M24 28h18M24 35h18M24 42h12"/><path d="M10 21h8m-8 9h8m-8 9h8"/><circle cx="45" cy="48" r="7"/></svg></div>
+            <div class="banner-story"><p class="banner-type">ESTANDARTE II · AUTOMATIZACIÓN</p><h3>Generador de reportes de servicio</h3><p>Una aplicación de escritorio que convierte registros y fotografías de equipos en reportes Word individuales y consolidados.</p><p class="banner-tools">Python · Tkinter · SQLite · python-docx</p><a href="https://github.com/magdaleno88/generador_reportes" target="_blank" rel="noreferrer">Abrir proyecto <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project-banner banner-left banner-gold">
+          <span class="banner-pole" aria-hidden="true"></span>
+          <div class="banner-cloth">
+            <div class="banner-emblem" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M17 10h30v44H17Z"/><path d="M23 20h18M23 27h18M23 34h10M32 39l-4 8h7l-3 8 11-13h-8l3-7"/><path d="M8 20h9m30 24h9"/></svg></div>
+            <div class="banner-story"><p class="banner-type">ESTANDARTE III · APLICACIÓN DE ESCRITORIO</p><h3>Auto-invoice</h3><p>Interfaz y automatización del navegador para reducir pasos repetitivos en la carga de facturas de un proceso interno.</p><p class="banner-tools">Python · PyQt5 · Selenium · XML</p><a href="https://github.com/magdaleno88/Auto-invoice" target="_blank" rel="noreferrer">Abrir proyecto <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="project-banner banner-right banner-light">
+          <span class="banner-pole" aria-hidden="true"></span>
+          <div class="banner-cloth">
+            <div class="banner-emblem" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M12 12h40v40H12Z"/><path d="M21 21h22v22H21Z"/><circle cx="32" cy="32" r="6"/><path d="M32 2v10m0 40v10M2 32h10m40 0h10M21 21l-8-8m30 8 8-8M21 43l-8 8m30-8 8 8"/></svg></div>
+            <div class="banner-story"><p class="banner-type">ESTANDARTE IV · BACKEND</p><h3>SAM Annotate API</h3><p>API REST que organiza imágenes, tareas y anotaciones para flujos de clasificación, con PostgreSQL y almacenamiento de archivos.</p><p class="banner-tools">Ruby on Rails · REST API · PostgreSQL · Active Storage</p><a href="https://github.com/magdaleno88/sam-annotate-api" target="_blank" rel="noreferrer">Abrir proyecto <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="habilidades" class="section-shell section-block">
-      <div class="section-heading reveal"><p class="eyebrow">Tecnologías</p><h2>Herramientas usadas en proyectos</h2></div>
-      <div class="skill-groups">
-        <div class="skill-group reveal"><h3>IA y datos</h3><p>PyTorch · scikit-learn · procesamiento de imágenes · evaluación de modelos · SQL</p></div>
-        <div class="skill-group reveal"><h3>Automatización</h3><p>Python · Selenium · PyQt5 · Tkinter · procesamiento XML · generación de documentos</p></div>
-        <div class="skill-group reveal"><h3>Backend y web</h3><p>Ruby on Rails · APIs REST · PostgreSQL · HTML · CSS · JavaScript · Git</p></div>
-        <div class="skill-group reveal"><h3>Forma de trabajo</h3><p>Resolución de problemas · documentación · aprendizaje continuo · comunicación técnica</p></div>
-      </div>
+    <section id="habilidades" class="craft" aria-labelledby="craft-title">
+      <div class="craft-intro"><p class="folio-label">04 / OFICIO</p><h2 id="craft-title">Herramientas que uso para construir.</h2><p>Elijo la tecnología según el problema y documento el camino para que el trabajo pueda reproducirse.</p></div>
+      <div class="craft-list"><div><span>01</span><h3>Imágenes y modelos</h3><p>PyTorch · scikit-learn · procesamiento de imágenes · evaluación de modelos</p></div><div><span>02</span><h3>Procesos y aplicaciones</h3><p>Python · Selenium · PyQt5 · Tkinter · XML · generación de documentos</p></div><div><span>03</span><h3>Backend y datos</h3><p>Ruby on Rails · APIs REST · PostgreSQL · SQL · Git</p></div><div><span>04</span><h3>Forma de trabajo</h3><p>Análisis del problema · documentación · comunicación técnica · aprendizaje continuo</p></div></div>
     </section>
 
-    <section id="certificados" class="section-shell section-block">
-      <div class="section-heading reveal"><p class="eyebrow">Formación continua</p><h2>Certificaciones seleccionadas</h2></div>
-      <div class="certificate-grid"><article class="certificate reveal"><span>HackerRank</span><h3>SQL Intermediate</h3><p>Consultas y manejo de datos relacionales.</p></article><article class="certificate reveal"><span>HackerRank</span><h3>Software Engineer Intern</h3><p>Fundamentos de Python, SQL y resolución de problemas.</p></article><article class="certificate reveal"><span>Udemy</span><h3>Máster en Python</h3><p>Desarrollo de aplicaciones y fundamentos del lenguaje.</p></article></div>
-    </section>
+    <section id="certificados" class="credentials" aria-labelledby="credentials-title"><p class="folio-label">NOTAS AL MARGEN</p><h2 id="credentials-title">Formación continua.</h2><div class="credential-line"><span>HackerRank</span><strong>SQL Intermediate</strong><span>Consultas y datos relacionales</span></div><div class="credential-line"><span>HackerRank</span><strong>Software Engineer Intern</strong><span>Python, SQL y resolución de problemas</span></div><div class="credential-line"><span>Udemy</span><strong>Máster en Python</strong><span>Fundamentos y desarrollo de aplicaciones</span></div></section>
 
-    <section id="contacto" class="section-shell contact-section reveal">
-      <p class="eyebrow">Contacto</p><h2>¿Construimos algo útil?</h2><p>Estoy disponible para oportunidades en desarrollo de software, automatización e IA aplicada.</p>
-      <div class="contact-links"><a class="button button-primary" href="mailto:jesusmagdaleno41@gmail.com">Enviar correo</a><a class="button button-secondary" href="https://www.linkedin.com/in/jes%C3%BAs-magdaleno-orozco-8b0603240/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a class="button button-secondary" href="https://github.com/magdaleno88" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-    </section>
+    <section id="contacto" class="colophon" aria-labelledby="contact-title"><p class="folio-label">05 / CONTACTO</p><h2 id="contact-title">La siguiente historia <em>podemos construirla juntos.</em></h2><p>Estoy disponible para oportunidades en desarrollo de software, automatización e IA aplicada.</p><div class="contact-links"><a href="mailto:jesusmagdaleno41@gmail.com">Escríbeme <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/jes%C3%BAs-magdaleno-orozco-8b0603240/" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://github.com/magdaleno88" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a></div></section>
+    <footer class="site-footer"><span>© <span id="year"></span> Jesús Magdaleno</span><a href="#inicio">Volver al inicio ↑</a></footer>
   </main>
-  <footer class="site-footer section-shell"><span>© <span id="year"></span> Jesús Magdaleno</span><a href="#inicio">Volver arriba ↑</a></footer>
-  <script src="script.js?v=marble-portfolio-2"></script>
+  <script src="script.js?v=folio-flags-2"></script>
 </body>
 </html>

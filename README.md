@@ -17,7 +17,7 @@ Sitio personal enfocado en proyectos de **Python, automatización y visión por 
 
 HTML semántico, CSS y JavaScript sin framework. El diseño es adaptable, respeta la preferencia de movimiento reducido e incluye navegación por teclado y contenido accesible.
 
-La identidad visual usa mármol blanco con vetas oscuras, tipografía editorial y detalles dorados. La textura está dibujada en SVG dentro del repositorio.
+La identidad visual combina mármol blanco, arquitectura oscura, hierro ornamental y luz dorada. La imagen de fondo fue creada a partir de una referencia visual proporcionada por el autor; los proyectos aparecen como estandartes con símbolos propios. La página abre con una presentación personal, sigue con la trayectoria académica y después muestra los proyectos.
 
 ## Ejecutar localmente
 
