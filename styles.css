@@ -1,448 +1,258 @@
-:root{
-  --bg:#07101d;
-  --surface:#0d1929;
-  --surface-2:#122238;
-  --text:#edf5ff;
-  --muted:#a7b7ca;
-  --line:rgba(193,219,246,.14);
-  --accent:#56e0c5;
-  --accent-2:#7ca7ff;
-  --max:1180px;
-  --radius:22px}
-  *{
-    box-sizing:border-box}
-    html{
-      scroll-behavior:smooth}
-      body{
-        margin:0;
-        color:var(--text);
-        background:radial-gradient(circle at 80% 5%,rgba(70,123,223,.18),transparent 28rem),radial-gradient(circle at 10% 30%,rgba(40,202,171,.1),transparent 24rem),var(--bg);
-        font-family:"DM Sans",system-ui,sans-serif;
-        line-height:1.65}
-        body:before{
-          content:"";
-          position:fixed;
-          inset:0;
-          pointer-events:none;
-          opacity:.28;
-          background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-          background-size:64px 64px;
-          mask-image:linear-gradient(to bottom,#000,transparent 75%);
-          z-index:-1}
-          a{
-            color:inherit;
-            text-decoration:none}
-            img{
-              max-width:100%;
-              display:block}
-              button{
-                font:inherit}
-                .sr-only{
-                  position:absolute;
-                  width:1px;
-                  height:1px;
-                  padding:0;
-                  overflow:hidden;
-                  clip:rect(0,0,0,0);
-                  white-space:nowrap;
-                  border:0}
-                  .skip-link{
-                    position:fixed;
-                    left:1rem;
-                    top:-5rem;
-                    z-index:100;
-                    background:var(--accent);
-                    color:#03100d;
-                    padding:.7rem 1rem;
-                    border-radius:8px}
-                    .skip-link:focus{
-                      top:1rem}
-                      .site-header{
-                        width:min(calc(100% - 2rem),var(--max));
-                        margin:1rem auto 0;
-                        min-height:68px;
-                        padding:.8rem 1rem;
-                        display:flex;
-                        align-items:center;
-                        justify-content:space-between;
-                        position:sticky;
-                        top:1rem;
-                        z-index:20;
-                        border:1px solid var(--line);
-                        border-radius:18px;
-                        background:rgba(7,16,29,.82);
-                        backdrop-filter:blur(18px)}
-                        .brand{
-                          display:inline-flex;
-                          align-items:center;
-                          gap:.75rem;
-                          font:700 .95rem "Manrope",sans-serif}
-                          .brand-mark{
-                            display:grid;
-                            place-items:center;
-                            width:38px;
-                            height:38px;
-                            border-radius:11px;
-                            color:#06130f;
-                            background:var(--accent);
-                            font-size:.78rem}
-                            .main-nav{
-                              display:flex;
-                              align-items:center;
-                              gap:1.5rem;
-                              color:var(--muted);
-                              font-size:.92rem}
-                              .main-nav a:hover,.main-nav a:focus-visible{
-                                color:var(--text)}
-                                .main-nav .nav-cta{
-                                  color:var(--text);
-                                  border:1px solid var(--line);
-                                  border-radius:10px;
-                                  padding:.55rem .85rem}
-                                  .menu-button{
-                                    display:none;
-                                    border:0;
-                                    background:transparent;
-                                    padding:.5rem}
-                                    .menu-button span:not(.sr-only){
-                                      display:block;
-                                      width:24px;
-                                      height:2px;
-                                      margin:4px;
-                                      background:var(--text)}
-                                      .section-shell{
-                                        width:min(calc(100% - 2rem),var(--max));
-                                        margin-inline:auto}
-                                        .section-block{
-                                          padding-block:7rem}
-                                          .hero{
-                                            min-height:calc(100vh - 100px);
-                                            padding-block:6rem;
-                                            display:grid;
-                                            grid-template-columns:1.45fr .75fr;
-                                            gap:5rem;
-                                            align-items:center}
-                                            .eyebrow{
-                                              margin:0 0 1rem;
-                                              color:var(--accent);
-                                              font-size:.75rem;
-                                              font-weight:700;
-                                              letter-spacing:.16em;
-                                              text-transform:uppercase}
-                                              h1,h2,h3{
-                                                font-family:"Manrope",sans-serif;
-                                                line-height:1.12;
-                                                margin-top:0}
-                                                h1{
-                                                  margin-bottom:1.5rem;
-                                                  font-size:clamp(3rem,7vw,6.4rem);
-                                                  letter-spacing:-.055em}
-                                                  h1 span{
-                                                    color:transparent;
-                                                    background:linear-gradient(90deg,var(--accent),var(--accent-2));
-                                                    background-clip:text}
-                                                    h2{
-                                                      margin-bottom:1rem;
-                                                      max-width:850px;
-                                                      font-size:clamp(2rem,4.3vw,3.8rem);
-                                                      letter-spacing:-.045em}
-                                                      h3{
-                                                        letter-spacing:-.02em}
-                                                        .hero-summary{
-                                                          max-width:720px;
-                                                          margin:0 0 2rem;
-                                                          color:var(--muted);
-                                                          font-size:clamp(1.05rem,1.8vw,1.25rem)}
-                                                          .hero-actions,.contact-links{
-                                                            display:flex;
-                                                            flex-wrap:wrap;
-                                                            gap:.85rem}
-                                                            .button{
-                                                              display:inline-flex;
-                                                              min-height:48px;
-                                                              align-items:center;
-                                                              justify-content:center;
-                                                              padding:.75rem 1.1rem;
-                                                              border:1px solid var(--line);
-                                                              border-radius:12px;
-                                                              font-weight:700;
-                                                              transition:transform .2s,border-color .2s,background .2s}
-                                                              .button:hover{
-                                                                transform:translateY(-2px);
-                                                                border-color:rgba(86,224,197,.55)}
-                                                                .button-primary{
-                                                                  color:#03120e;
-                                                                  background:var(--accent);
-                                                                  border-color:var(--accent)}
-                                                                  .button-secondary{
-                                                                    background:rgba(255,255,255,.025)}
-                                                                    .signal-list,.tech-list{
-                                                                      list-style:none;
-                                                                      padding:0;
-                                                                      display:flex;
-                                                                      flex-wrap:wrap;
-                                                                      gap:.55rem}
-                                                                      .signal-list{
-                                                                        margin:2.4rem 0 0}
-                                                                        .signal-list li,.tech-list li{
-                                                                          color:var(--muted);
-                                                                          border:1px solid var(--line);
-                                                                          border-radius:999px;
-                                                                          padding:.35rem .7rem;
-                                                                          font-size:.82rem}
-                                                                          .hero-panel{
-                                                                            padding:1rem;
-                                                                            border:1px solid var(--line);
-                                                                            border-radius:var(--radius);
-                                                                            background:linear-gradient(145deg,rgba(20,39,63,.9),rgba(9,20,35,.9));
-                                                                            box-shadow:0 30px 80px rgba(0,0,0,.24)}
-                                                                            .portrait-wrap{
-                                                                              position:relative;
-                                                                              border-radius:16px;
-                                                                              overflow:hidden;
-                                                                              aspect-ratio:4/4.6;
-                                                                              background:var(--surface-2)}
-                                                                              .portrait-wrap img{
-                                                                                width:100%;
-                                                                                height:100%;
-                                                                                object-fit:cover;
-                                                                                object-position:center top}
-                                                                                .availability{
-                                                                                  position:absolute;
-                                                                                  left:.8rem;
-                                                                                  bottom:.8rem;
-                                                                                  color:#04120e;
-                                                                                  background:var(--accent);
-                                                                                  border-radius:999px;
-                                                                                  padding:.45rem .7rem;
-                                                                                  font-size:.72rem;
-                                                                                  font-weight:800}
-                                                                                  .profile-facts{
-                                                                                    display:grid;
-                                                                                    gap:.9rem;
-                                                                                    padding:1.25rem .4rem .35rem}
-                                                                                    .profile-facts div{
-                                                                                      display:grid;
-                                                                                      grid-template-columns:1fr 1.45fr;
-                                                                                      gap:1rem;
-                                                                                      border-bottom:1px solid var(--line);
-                                                                                      padding-bottom:.8rem}
-                                                                                      .profile-facts div:last-child{
-                                                                                        border:0;
-                                                                                        padding-bottom:0}
-                                                                                        .profile-facts span{
-                                                                                          color:var(--muted);
-                                                                                          font-size:.82rem}
-                                                                                          .profile-facts strong{
-                                                                                            font-size:.86rem}
-                                                                                            .section-heading{
-                                                                                              margin-bottom:3rem}
-                                                                                              .section-heading>p:last-child{
-                                                                                                max-width:650px;
-                                                                                                color:var(--muted)}
-                                                                                                .project-grid{
-                                                                                                  display:grid;
-                                                                                                  grid-template-columns:repeat(2,1fr);
-                                                                                                  gap:1rem}
-                                                                                                  .project-card{
-                                                                                                    min-height:410px;
-                                                                                                    display:flex;
-                                                                                                    flex-direction:column;
-                                                                                                    justify-content:space-between;
-                                                                                                    padding:1.5rem;
-                                                                                                    border:1px solid var(--line);
-                                                                                                    border-radius:var(--radius);
-                                                                                                    background:rgba(13,25,41,.74);
-                                                                                                    transition:transform .25s,border-color .25s,background .25s}
-                                                                                                    .project-card:hover{
-                                                                                                      transform:translateY(-5px);
-                                                                                                      border-color:rgba(86,224,197,.35);
-                                                                                                      background:rgba(18,34,56,.9)}
-                                                                                                      .project-featured{
-                                                                                                        grid-column:span 2;
-                                                                                                        min-height:445px;
-                                                                                                        background:linear-gradient(130deg,rgba(24,53,73,.94),rgba(13,25,41,.82))}
-                                                                                                        .project-number{
-                                                                                                          align-self:flex-end;
-                                                                                                          color:rgba(237,245,255,.18);
-                                                                                                          font:800 4rem "Manrope",sans-serif;
-                                                                                                          line-height:1}
-                                                                                                          .project-meta{
-                                                                                                            display:flex;
-                                                                                                            gap:.5rem;
-                                                                                                            margin-bottom:1rem;
-                                                                                                            color:var(--accent);
-                                                                                                            text-transform:uppercase;
-                                                                                                            letter-spacing:.12em;
-                                                                                                            font-size:.67rem;
-                                                                                                            font-weight:700}
-                                                                                                            .project-meta span+span:before{
-                                                                                                              content:"·";
-                                                                                                              margin-right:.5rem;
-                                                                                                              color:var(--muted)}
-                                                                                                              .project-card h3{
-                                                                                                                max-width:750px;
-                                                                                                                margin-bottom:.9rem;
-                                                                                                                font-size:clamp(1.45rem,3vw,2.3rem)}
-                                                                                                                .project-card p{
-                                                                                                                  max-width:760px;
-                                                                                                                  margin:0;
-                                                                                                                  color:var(--muted)}
-                                                                                                                  .tech-list{
-                                                                                                                    margin-block:1.3rem}
-                                                                                                                    .project-link{
-                                                                                                                      display:inline-flex;
-                                                                                                                      gap:.45rem;
-                                                                                                                      align-items:center;
-                                                                                                                      color:var(--text);
-                                                                                                                      font-weight:700}
-                                                                                                                      .project-link span{
-                                                                                                                        color:var(--accent);
-                                                                                                                        transition:transform .2s}
-                                                                                                                        .project-link:hover span{
-                                                                                                                          transform:translate(3px,-3px)}
-                                                                                                                          .profile-section{
-                                                                                                                            border-block:1px solid var(--line)}
-                                                                                                                            .profile-grid{
-                                                                                                                              display:grid;
-                                                                                                                              grid-template-columns:1.1fr .9fr;
-                                                                                                                              gap:5rem}
-                                                                                                                              .profile-copy{
-                                                                                                                                color:var(--muted);
-                                                                                                                                font-size:1.13rem}
-                                                                                                                                .profile-copy p:first-child{
-                                                                                                                                  margin-top:0}
-                                                                                                                                  .principles{
-                                                                                                                                    display:grid}
-                                                                                                                                    .principles div{
-                                                                                                                                      display:grid;
-                                                                                                                                      grid-template-columns:48px 1fr;
-                                                                                                                                      gap:1rem;
-                                                                                                                                      align-items:start;
-                                                                                                                                      padding:1.25rem 0;
-                                                                                                                                      border-top:1px solid var(--line)}
-                                                                                                                                      .principles strong{
-                                                                                                                                        color:var(--accent);
-                                                                                                                                        font:700 .8rem "Manrope",sans-serif}
-                                                                                                                                        .principles span{
-                                                                                                                                          font-weight:600}
-                                                                                                                                          .skill-groups{
-                                                                                                                                            display:grid;
-                                                                                                                                            grid-template-columns:repeat(2,1fr);
-                                                                                                                                            gap:1rem}
-                                                                                                                                            .skill-group,.certificate{
-                                                                                                                                              padding:1.5rem;
-                                                                                                                                              border:1px solid var(--line);
-                                                                                                                                              border-radius:18px;
-                                                                                                                                              background:rgba(13,25,41,.58)}
-                                                                                                                                              .skill-group h3,.certificate h3{
-                                                                                                                                                margin-bottom:.6rem;
-                                                                                                                                                font-size:1.15rem}
-                                                                                                                                                .skill-group p,.certificate p{
-                                                                                                                                                  margin:0;
-                                                                                                                                                  color:var(--muted)}
-                                                                                                                                                  .certificate-grid{
-                                                                                                                                                    display:grid;
-                                                                                                                                                    grid-template-columns:repeat(3,1fr);
-                                                                                                                                                    gap:1rem}
-                                                                                                                                                    .certificate span{
-                                                                                                                                                      display:block;
-                                                                                                                                                      margin-bottom:1.25rem;
-                                                                                                                                                      color:var(--accent);
-                                                                                                                                                      font-size:.75rem;
-                                                                                                                                                      font-weight:700;
-                                                                                                                                                      text-transform:uppercase;
-                                                                                                                                                      letter-spacing:.12em}
-                                                                                                                                                      .contact-section{
-                                                                                                                                                        margin-block:5rem 2rem;
-                                                                                                                                                        padding:clamp(2rem,6vw,5rem);
-                                                                                                                                                        border:1px solid rgba(86,224,197,.28);
-                                                                                                                                                        border-radius:28px;
-                                                                                                                                                        background:linear-gradient(120deg,rgba(29,70,79,.75),rgba(18,34,56,.84));
-                                                                                                                                                        text-align:center}
-                                                                                                                                                        .contact-section h2{
-                                                                                                                                                          margin-inline:auto}
-                                                                                                                                                          .contact-section>p:not(.eyebrow){
-                                                                                                                                                            max-width:650px;
-                                                                                                                                                            margin:0 auto 2rem;
-                                                                                                                                                            color:var(--muted)}
-                                                                                                                                                            .contact-links{
-                                                                                                                                                              justify-content:center}
-                                                                                                                                                              .site-footer{
-                                                                                                                                                                padding-block:2rem 3rem;
-                                                                                                                                                                display:flex;
-                                                                                                                                                                justify-content:space-between;
-                                                                                                                                                                color:var(--muted);
-                                                                                                                                                                border-top:1px solid var(--line);
-                                                                                                                                                                font-size:.88rem}
-                                                                                                                                                                .reveal{
-                                                                                                                                                                  opacity:0;
-                                                                                                                                                                  transform:translateY(18px);
-                                                                                                                                                                  transition:opacity .65s ease,transform .65s ease}
-                                                                                                                                                                  .reveal.visible{
-                                                                                                                                                                    opacity:1;
-                                                                                                                                                                    transform:none}
-                                                                                                                                                                    @media(max-width:850px){
-                                                                                                                                                                      .menu-button{
-                                                                                                                                                                        display:block}
-                                                                                                                                                                        .main-nav{
-                                                                                                                                                                          display:none;
-                                                                                                                                                                          position:absolute;
-                                                                                                                                                                          top:76px;
-                                                                                                                                                                          left:0;
-                                                                                                                                                                          right:0;
-                                                                                                                                                                          padding:1rem;
-                                                                                                                                                                          flex-direction:column;
-                                                                                                                                                                          align-items:stretch;
-                                                                                                                                                                          border:1px solid var(--line);
-                                                                                                                                                                          border-radius:16px;
-                                                                                                                                                                          background:#0a1626}
-                                                                                                                                                                          .main-nav.open{
-                                                                                                                                                                            display:flex}
-                                                                                                                                                                            .main-nav a{
-                                                                                                                                                                              padding:.55rem}
-                                                                                                                                                                              .hero{
-                                                                                                                                                                                grid-template-columns:1fr;
-                                                                                                                                                                                gap:3rem;
-                                                                                                                                                                                padding-top:5rem}
-                                                                                                                                                                                .hero-panel{
-                                                                                                                                                                                  max-width:520px}
-                                                                                                                                                                                  .project-grid,.skill-groups{
-                                                                                                                                                                                    grid-template-columns:1fr}
-                                                                                                                                                                                    .project-featured{
-                                                                                                                                                                                      grid-column:auto}
-                                                                                                                                                                                      .profile-grid{
-                                                                                                                                                                                        grid-template-columns:1fr;
-                                                                                                                                                                                        gap:2rem}
-                                                                                                                                                                                        .certificate-grid{
-                                                                                                                                                                                          grid-template-columns:1fr}
-                                                                                                                                                                                        }
-                                                                                                                                                                                        @media(max-width:520px){
-                                                                                                                                                                                          .site-header,.section-shell{
-                                                                                                                                                                                            width:min(calc(100% - 1.2rem),var(--max))}
-                                                                                                                                                                                            .brand>span:last-child{
-                                                                                                                                                                                              display:none}
-                                                                                                                                                                                              .section-block{
-                                                                                                                                                                                                padding-block:5rem}
-                                                                                                                                                                                                .hero{
-                                                                                                                                                                                                  padding-block:4.5rem;
-                                                                                                                                                                                                  min-height:auto}
-                                                                                                                                                                                                  h1{
-                                                                                                                                                                                                    font-size:clamp(2.8rem,15vw,4.2rem)}
-                                                                                                                                                                                                    .project-card{
-                                                                                                                                                                                                      min-height:390px;
-                                                                                                                                                                                                      padding:1.2rem}
-                                                                                                                                                                                                      .site-footer{
-                                                                                                                                                                                                        flex-direction:column;
-                                                                                                                                                                                                        gap:.6rem}
-                                                                                                                                                                                                      }
-                                                                                                                                                                                                      @media(prefers-reduced-motion:reduce){
-                                                                                                                                                                                                        html{
-                                                                                                                                                                                                          scroll-behavior:auto}
-                                                                                                                                                                                                          *,*:before,*:after{
-                                                                                                                                                                                                            animation-duration:.01ms!important;
-                                                                                                                                                                                                            transition-duration:.01ms!important}
-                                                                                                                                                                                                            .reveal{
-                                                                                                                                                                                                              opacity:1;
-                                                                                                                                                                                                              transform:none}
-                                                                                                                                                                                                            }
+:root {
+  --ivory: #f5f2eb;
+  --paper: #fcfaf5;
+  --ink: #1c1b19;
+  --muted: #605c55;
+  --gold: #9c7835;
+  --gold-light: #dbbc78;
+  --gold-dark: #73551f;
+  --line: rgba(55, 48, 36, .2);
+  --shadow: 0 25px 70px rgba(40, 36, 28, .12);
+  --max: 1260px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--ivory) url("img/marble-veins.svg") center top / 1600px auto repeat;
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(110deg, rgba(255,255,255,.22), transparent 42%, rgba(127,115,97,.06));
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; }
+::selection { color: #fff; background: var(--gold-dark); }
+:focus-visible { outline: 2px solid var(--gold-dark); outline-offset: 4px; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: fixed; top: -5rem; left: 1rem; z-index: 100;
+  padding: .65rem 1rem; color: #fff; background: var(--ink);
+}
+.skip-link:focus { top: 1rem; }
+
+/* A book's thin gilt edges replace the previous floating dashboard bar. */
+.site-header {
+  position: sticky; top: 0; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between;
+  width: min(calc(100% - 5rem), var(--max));
+  min-height: 86px; margin: 0 auto;
+  border-bottom: 1px solid var(--gold);
+  background: rgba(248,246,240,.88);
+  backdrop-filter: blur(14px);
+}
+.site-header::after {
+  content: ""; position: absolute; right: 0; bottom: -3px;
+  width: 115px; height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold-dark));
+}
+.brand { display: inline-flex; align-items: center; gap: .85rem; font: 600 .92rem "DM Sans", sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.brand-mark {
+  display: grid; place-items: center; width: 42px; height: 42px;
+  border: 1px solid var(--gold); color: var(--gold-dark);
+  font: 700 .8rem "DM Sans", sans-serif; letter-spacing: -.08em;
+  box-shadow: inset 0 0 0 3px var(--ivory), inset 0 0 0 4px rgba(156,120,53,.42);
+}
+.brand-mark::first-letter { letter-spacing: -.08em; }
+.brand-mark { text-indent: -.08em; }
+.brand-mark { line-height: 1; }
+.main-nav { display: flex; align-items: center; gap: 2.4rem; font-size: .78rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.main-nav a { transition: color .25s ease; }
+.main-nav a:hover { color: var(--gold-dark); }
+.main-nav .nav-cta { padding: .65rem 0 .6rem; border-bottom: 1px solid var(--gold); }
+.menu-button { display: none; border: 0; background: transparent; padding: .5rem; cursor: pointer; }
+.menu-button span:not(.sr-only) { display: block; width: 24px; height: 1px; margin: 5px; background: var(--ink); }
+
+.section-shell { width: min(calc(100% - 5rem), var(--max)); margin-inline: auto; }
+.section-block { padding-block: 7rem; }
+.eyebrow { margin: 0 0 1.5rem; color: var(--gold-dark); font-size: .72rem; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; }
+h1, h2, h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; line-height: .98; }
+h1 { margin: 0 0 2rem; font-size: clamp(4rem, 7.7vw, 7.65rem); letter-spacing: -.045em; }
+h2 { margin: 0 0 1.3rem; font-size: clamp(3.3rem, 5.4vw, 5.3rem); letter-spacing: -.035em; }
+h3 { margin: 0; font-size: clamp(2.35rem, 3vw, 3.4rem); letter-spacing: -.025em; }
+
+.hero {
+  position: relative; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(310px, .7fr);
+  align-items: center; gap: clamp(3rem, 7vw, 8rem);
+  min-height: 760px; padding-block: 5.7rem 7rem;
+}
+.hero::before {
+  content: "PORTFOLIO  /  2026";
+  position: absolute; left: -3.7rem; top: 50%;
+  color: var(--gold-dark); opacity: .65;
+  font: 600 .62rem "DM Sans", sans-serif; letter-spacing: .34em;
+  transform: translate(-50%,-50%) rotate(-90deg);
+  white-space: nowrap;
+}
+.hero-copy { position: relative; z-index: 2; }
+.hero-copy::before {
+  content: "✦"; display: block; width: 80px; margin-bottom: 2.7rem;
+  border-bottom: 1px solid var(--gold); color: var(--gold);
+  font: 1.3rem Georgia, serif; line-height: 1.25;
+}
+.hero h1 span { display: block; color: var(--gold-dark); font-style: italic; font-weight: 500; }
+.hero-summary { max-width: 610px; margin: 0 0 2rem; padding-left: 1.4rem; border-left: 2px solid var(--gold); color: #4e4a44; font-size: clamp(1.04rem, 1.35vw, 1.25rem); line-height: 1.8; }
+.hero-actions, .contact-links { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+.button {
+  display: inline-flex; justify-content: center; align-items: center;
+  min-height: 52px; padding: .75rem 1.45rem;
+  border: 1px solid var(--ink);
+  font-size: .78rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase;
+  transition: background .25s, color .25s, box-shadow .25s, transform .25s;
+}
+.button:hover { transform: translateY(-2px); }
+.button-primary { color: var(--paper); background: var(--ink); box-shadow: 5px 5px 0 rgba(156,120,53,.65); }
+.button-primary:hover { background: #3a3327; box-shadow: 7px 7px 0 var(--gold); }
+.button-secondary { color: var(--ink); background: rgba(255,255,255,.32); border-color: var(--gold); }
+.button-secondary:hover { color: var(--gold-dark); background: rgba(255,255,255,.72); }
+.signal-list { display: flex; flex-wrap: wrap; gap: .55rem 1.6rem; max-width: 700px; margin: 3rem 0 0; padding: 1.3rem 0 0; border-top: 1px solid var(--line); list-style: none; }
+.signal-list li { display: inline-flex; align-items: center; gap: .55rem; color: var(--muted); font-size: .76rem; font-weight: 600; letter-spacing: .07em; }
+.signal-list li::before { content: "✦"; color: var(--gold); font-size: .75rem; }
+
+.hero-panel { position: relative; max-width: 440px; padding: 14px; margin-left: auto; background: #171714; box-shadow: var(--shadow), 15px 15px 0 rgba(156,120,53,.24); }
+.hero-panel::before, .hero-panel::after { content: ""; position: absolute; z-index: 3; width: 30px; height: 30px; pointer-events: none; }
+.hero-panel::before { left: -8px; top: -8px; border-left: 2px solid var(--gold); border-top: 2px solid var(--gold); }
+.hero-panel::after { right: -8px; bottom: -8px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); }
+.portrait-wrap { position: relative; overflow: hidden; border: 1px solid var(--gold); }
+.portrait-wrap img { width: 100%; aspect-ratio: .93; object-fit: cover; object-position: center top; filter: saturate(.75) contrast(1.04); }
+.portrait-wrap::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(130deg, rgba(255,255,255,.16), transparent 42%, rgba(0,0,0,.15)); }
+.availability { position: absolute; z-index: 2; bottom: 0; left: 0; right: 0; padding: .7rem 1rem; color: #f4ebd7; background: rgba(22,21,18,.85); border-top: 1px solid var(--gold); font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-align: center; text-transform: uppercase; }
+.profile-facts { padding: .55rem .7rem .05rem; }
+.profile-facts div { display: flex; justify-content: space-between; gap: 1rem; padding: .74rem 0; border-bottom: 1px solid rgba(219,188,120,.25); color: #dad4c9; font-size: .76rem; }
+.profile-facts div:last-child { border-bottom: 0; }
+.profile-facts span { color: #b59b68; }
+.profile-facts strong { max-width: 60%; font-weight: 600; text-align: right; }
+
+/* Chapters are set on marble rather than rounded software cards. */
+.section-heading { position: relative; max-width: 850px; margin-bottom: 3.7rem; padding-left: 2.2rem; border-left: 1px solid var(--gold); }
+.section-heading::before { content: ""; position: absolute; top: 0; left: -4px; width: 7px; height: 7px; background: var(--gold); transform: rotate(45deg); }
+.section-heading p:last-child:not(.eyebrow) { max-width: 650px; margin: 0; color: var(--muted); font-size: 1.05rem; }
+.project-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.35rem; }
+.project-card { position: relative; display: flex; flex-direction: column; min-height: 440px; padding: 2rem; overflow: hidden; border: 1px solid rgba(94,80,56,.25); background: rgba(255,253,248,.78); box-shadow: 0 14px 35px rgba(50,45,36,.06); transition: transform .3s, box-shadow .3s; }
+.project-card:hover { transform: translateY(-6px); box-shadow: 0 22px 48px rgba(50,45,36,.14); }
+.project-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), transparent); }
+.project-number { color: var(--gold); font: italic 400 4.2rem "Cormorant Garamond", Georgia, serif; line-height: .8; }
+.project-content { display: flex; flex: 1; flex-direction: column; padding-top: 2rem; }
+.project-meta { display: flex; gap: .7rem; margin-bottom: 1rem; color: var(--gold-dark); font-size: .68rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.project-meta span + span::before { content: "/"; margin-right: .7rem; }
+.project-card h3 { margin-bottom: 1.05rem; }
+.project-card p { margin: 0 0 1.3rem; color: var(--muted); font-size: .93rem; line-height: 1.75; }
+.tech-list { display: flex; flex-wrap: wrap; gap: .5rem .9rem; margin: auto 0 1.65rem; padding: 0; list-style: none; }
+.tech-list li { color: #5e5342; font-size: .73rem; font-weight: 600; }
+.tech-list li + li::before { content: "·"; margin-right: .9rem; color: var(--gold); }
+.project-link { display: inline-flex; align-items: center; gap: .6rem; align-self: flex-start; padding-bottom: .3rem; border-bottom: 1px solid var(--gold); color: var(--ink); font-size: .76rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.project-link span { font-size: 1.1rem; transition: transform .2s; }
+.project-link:hover span { transform: translate(3px,-3px); }
+.project-featured { grid-column: 1 / -1; min-height: 390px; display: grid; grid-template-columns: .24fr 1fr; gap: 2rem; padding: clamp(2rem,4.2vw,4rem); color: var(--paper); border-color: var(--gold); background: radial-gradient(circle at 90% 0%, rgba(206,164,85,.16), transparent 31%), linear-gradient(145deg,#1c1c1b,#2a2925 50%,#131313); box-shadow: 12px 12px 0 rgba(156,120,53,.22); }
+.project-featured::after { content: ""; position: absolute; inset: 0; opacity: .14; pointer-events: none; background: url("img/marble-veins.svg") center / cover; mix-blend-mode: screen; }
+.project-featured > * { position: relative; z-index: 1; }
+.project-featured .project-number { font-size: clamp(5.5rem,12vw,10rem); color: var(--gold-light); }
+.project-featured .project-content { padding-top: 0; }
+.project-featured .project-meta { color: var(--gold-light); }
+.project-featured h3 { max-width: 760px; font-size: clamp(3rem,5vw,5.5rem); }
+.project-featured p { max-width: 760px; color: #d3cfc6; }
+.project-featured .tech-list { margin: 1rem 0 2rem; }
+.project-featured .tech-list li, .project-featured .project-link { color: #e8d2a5; }
+
+.profile-section { position: relative; margin-top: 4rem; padding: 5rem; color: #f6f1e7; background: #1c1b19; border-top: 3px solid var(--gold); border-bottom: 3px solid var(--gold); box-shadow: var(--shadow); }
+.profile-section::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: url("img/marble-veins.svg") center / 1600px auto; opacity: .055; mix-blend-mode: screen; }
+.profile-section > * { position: relative; }
+.profile-section .section-heading { border-left-color: var(--gold-light); }
+.profile-section .eyebrow { color: var(--gold-light); }
+.profile-section .section-heading::before { background: var(--gold-light); }
+.profile-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 5rem; }
+.profile-copy { max-width: 700px; font-size: 1.12rem; line-height: 1.85; color: #d9d3c7; }
+.profile-copy p:first-child { margin-top: 0; }
+.principles { border-top: 1px solid var(--gold); }
+.principles div { display: grid; grid-template-columns: 3rem 1fr; gap: 1rem; align-items: start; padding: 1.1rem 0; border-bottom: 1px solid rgba(219,188,120,.3); }
+.principles strong { color: var(--gold-light); font: italic 2rem "Cormorant Garamond", Georgia, serif; line-height: 1; }
+.principles span { font-size: .94rem; }
+
+.skill-groups { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 0 4rem; counter-reset: skill; border-top: 1px solid var(--gold); }
+.skill-group { position: relative; padding: 2.2rem 0 2.1rem 4.1rem; border-bottom: 1px solid var(--line); counter-increment: skill; }
+.skill-group::before { content: "0" counter(skill); position: absolute; top: 2.2rem; left: 0; color: var(--gold); font: italic 2rem "Cormorant Garamond", Georgia, serif; }
+.skill-group h3 { margin-bottom: .7rem; font-size: 2.6rem; }
+.skill-group p { margin: 0; color: var(--muted); }
+.certificate-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 1.3rem; }
+.certificate { position: relative; min-height: 245px; padding: 2rem; border: 1px solid var(--line); background: rgba(255,253,248,.57); }
+.certificate::after { content: "✦"; position: absolute; top: 1.4rem; right: 1.5rem; color: var(--gold); font-size: 1.1rem; }
+.certificate span { display: block; margin-bottom: 2.1rem; color: var(--gold-dark); font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+.certificate h3 { margin-bottom: .65rem; font-size: 2.4rem; }
+.certificate p { margin: 0; color: var(--muted); font-size: .9rem; }
+
+.contact-section { position: relative; margin-block: 4rem 3rem; padding: clamp(2.5rem,6vw,5.2rem); color: #f7f1e5; background: #1b1a18; border: 1px solid var(--gold); text-align: center; box-shadow: 12px 12px 0 rgba(156,120,53,.18); }
+.contact-section::before { content: ""; position: absolute; inset: 8px; border: 1px solid rgba(219,188,120,.36); pointer-events: none; }
+.contact-section .eyebrow { color: var(--gold-light); }
+.contact-section h2 { margin-inline: auto; }
+.contact-section > p:not(.eyebrow) { max-width: 620px; margin: 0 auto 2.2rem; color: #d7d1c6; }
+.contact-links { justify-content: center; }
+.contact-section .button-primary { color: var(--ink); background: var(--gold-light); border-color: var(--gold-light); box-shadow: 5px 5px 0 rgba(255,255,255,.14); }
+.contact-section .button-primary:hover { color: var(--ink); background: #f0d69d; }
+.contact-section .button-secondary { color: #f8edda; background: transparent; border-color: var(--gold); }
+.contact-section .button-secondary:hover { background: rgba(219,188,120,.12); }
+.site-footer { display: flex; justify-content: space-between; padding-block: 2rem 3rem; border-top: 1px solid var(--gold); color: var(--muted); font-size: .82rem; letter-spacing: .08em; }
+.site-footer a { color: var(--gold-dark); }
+
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+.js .reveal.visible { opacity: 1; transform: none; }
+
+@media (max-width: 1000px) {
+  .site-header, .section-shell { width: min(calc(100% - 3rem), var(--max)); }
+  .hero { grid-template-columns: minmax(0,1.1fr) minmax(270px,.75fr); gap: 3rem; }
+  .hero::before { display: none; }
+  .project-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .project-card:not(.project-featured):last-child { grid-column: span 2; min-height: 340px; }
+  .profile-section { padding: 4rem 3rem; }
+}
+@media (max-width: 760px) {
+  .site-header, .section-shell { width: min(calc(100% - 2rem), var(--max)); }
+  .site-header { min-height: 72px; }
+  .menu-button { display: block; }
+  .main-nav { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 1rem 1.3rem; flex-direction: column; align-items: stretch; gap: 0; background: rgba(250,248,243,.98); border: 1px solid var(--gold); box-shadow: var(--shadow); }
+  .main-nav.open { display: flex; }
+  .main-nav a { padding: .7rem .2rem; }
+  .main-nav .nav-cta { border-bottom: 0; }
+  .hero { min-height: 0; grid-template-columns: 1fr; gap: 4rem; padding-block: 5rem 4rem; }
+  .hero-panel { width: min(100%,430px); margin: 0 auto; }
+  .project-grid { grid-template-columns: 1fr; }
+  .project-card:not(.project-featured):last-child { grid-column: auto; min-height: 440px; }
+  .project-featured { grid-template-columns: 1fr; gap: .7rem; }
+  .project-featured .project-number { font-size: 5rem; }
+  .profile-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .skill-groups { grid-template-columns: 1fr; }
+  .certificate-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .brand > span:last-child { font-size: .78rem; letter-spacing: .08em; }
+  .section-block { padding-block: 4.5rem; }
+  .hero { padding-top: 3.7rem; }
+  .hero-copy::before { margin-bottom: 1.8rem; }
+  h1 { font-size: clamp(3.6rem, 13vw, 5rem); }
+  h2 { font-size: 3.35rem; }
+  .hero-summary { padding-left: 1rem; }
+  .signal-list { gap: .55rem 1rem; }
+  .section-heading { padding-left: 1.2rem; }
+  .project-card, .project-featured { padding: 1.5rem; }
+  .profile-section { padding: 3.5rem 1.5rem; }
+  .contact-section { padding: 3.3rem 1.3rem; }
+  .contact-links .button { width: 100%; }
+  .site-footer { flex-direction: column; gap: .7rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
