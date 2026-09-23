@@ -117,6 +117,7 @@ em { font-weight: 500; }
 .banner-story > p:not(.banner-type) { max-width: 640px; margin: 0 0 .7rem; font-size: .89rem; line-height: 1.7; }
 .banner-tools { opacity: .77; font-size: .73rem !important; font-weight: 600; letter-spacing: .02em; }
 .banner-story a { display: inline-flex; gap: 1rem; margin-top: .3rem; padding-bottom: .3rem; border-bottom: 1px solid currentColor; color: var(--gold); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; transition: gap .2s; }
+.banner-story a + a { margin-left: 1.5rem; }
 .banner-story a:hover { gap: 1.5rem; }
 .banner-light .banner-story a { color: var(--gold-deep); }
 .banner-gold .banner-story a { color: #fff0c4; }
@@ -221,6 +222,7 @@ em { font-weight: 500; }
   .opening h1 { font-size: 3.65rem; }
   .opening-actions { gap: .6rem 1.2rem; }
   .banner-story h3 { font-size: 2.55rem; }
+  .banner-story a + a { margin-left: 1rem; }
   .site-footer { flex-direction: column; gap: .6rem; }
 }
 @media (prefers-reduced-motion: reduce) {
