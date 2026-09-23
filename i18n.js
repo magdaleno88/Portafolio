@@ -62,6 +62,7 @@ const englishCopy = {
   '.project-banner:nth-child(3) .banner-story a': 'View project <span aria-hidden="true">↗</span>',
   '.project-banner:nth-child(4) .banner-story a': 'View project <span aria-hidden="true">↗</span>',
   '.project-banner:nth-child(1) .banner-story a:nth-of-type(2)': 'Case study <span aria-hidden="true">↗</span>',
+  '.project-banner:nth-child(1) .banner-story a:nth-of-type(3)': 'OCT results <span aria-hidden="true">↗</span>',
   '.project-banner:nth-child(2) .banner-story a:nth-of-type(2)': 'Case study <span aria-hidden="true">↗</span>',
   '.project-banner:nth-child(2) .banner-story a:nth-of-type(3)': 'Reproducible example <span aria-hidden="true">↗</span>',
   '.project-banner:nth-child(3) .banner-story a:nth-of-type(2)': 'Case study <span aria-hidden="true">↗</span>',
