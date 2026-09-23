@@ -66,6 +66,8 @@ em { font-weight: 500; }
 .text-link { display: inline-flex; gap: 1rem; padding: .45rem 0; border-bottom: 1px solid var(--gold); color: #f5e6c4; font-size: .72rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; transition: gap .2s, color .2s; }
 .text-link:hover { gap: 1.5rem; color: var(--gold); }
 .text-link.subtle { border-bottom-color: rgba(221,200,155,.4); }
+.text-link.cv-download { padding: .55rem .85rem; border: 1px solid var(--gold); background: rgba(180,147,80,.1); }
+.text-link.cv-download:hover { background: rgba(180,147,80,.2); }
 .opening-bottomline { padding-top: 1rem; color: #d0b16e; }
 
 /* Academic path is the first chapter after the opening. */

@@ -26,7 +26,8 @@ const englishCopy = {
   '.opening-lead': 'I build tools with Python, automation and computer vision to turn images, data and processes into useful solutions.',
   '.opening-note': 'I am Jesús Magdaleno. My path combines biomedical engineering with studies in systems and information technology.',
   '.opening-actions a:first-child': 'Explore projects <span aria-hidden="true">↗</span>',
-  '.opening-actions a:last-child': 'View GitHub <span aria-hidden="true">↗</span>',
+  '.opening-actions a:nth-child(2)': 'View GitHub <span aria-hidden="true">↗</span>',
+  '.opening-actions .cv-download': 'Download CV · Spanish PDF <span aria-hidden="true">↓</span>',
   '.opening-bottomline span:nth-child(1)': 'COMPUTER VISION',
   '.opening-bottomline span:nth-child(2)': 'AUTOMATION',
   '.opening-bottomline span:nth-child(3)': 'APPLICATIONS',
@@ -92,6 +93,7 @@ const englishCopy = {
   '#contact-title': 'The next story <em>we can build together.</em>',
   '.colophon > p:not(.folio-label)': 'I am open to opportunities in software development, automation and applied AI.',
   '.contact-links a:first-child': 'Email me <span aria-hidden="true">↗</span>',
+  '.contact-links a:last-child': 'Download CV · Spanish PDF <span aria-hidden="true">↓</span>',
   '.site-footer a': 'Back to top ↑',
 };
 
